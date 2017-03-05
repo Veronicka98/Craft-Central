@@ -11,19 +11,13 @@
   margin: 0; }
 
 html {
-  overflow: auto; }
+  overflow: hidden; }
 
 body {
   font-family: 'Gnuolane Free';
   width: 100%;
-  position: absolute; }
-
-a, a:hover {
-  text-decoration: none;
-  color: white; }
-
-div.ui.grid.row.column {
-  padding: 0em; }
+  position: absolute;
+  overflow: hidden; }
 
 .imagecontainer:hover .overlay {
   opacity: 0.7; }
@@ -32,8 +26,11 @@ div.ui.grid.row.column {
   position: relative; }
   .imagecontainer :hover .overlay {
     opacity: 0.7; }
-  .imagecontainer :hover .text {
+  .imagecontainer :hover .text, .imagecontainer :hover .sub {
     font-size: 45px; }
+  .imagecontainer :hover .sub {
+    font-size: 15px;
+    top: 62%; }
 
 .imagecontainer img {
   display: block; }
@@ -50,7 +47,7 @@ div.ui.grid.row.column {
   transition: .5s ease;
   background-color: #401448; }
 
-.text {
+.text, .sub {
   color: white;
   font-size: 40px;
   line-height: normal;
@@ -61,34 +58,51 @@ div.ui.grid.row.column {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); }
 
+.sub {
+  font-size: 15px;
+  top: 60%; }
+
 div.ui.segment.banner {
-  background-color: #401448; }
-  div.ui.segment.banner p {
+  background-color: #401448;
+  border-radius: 0;
+  margin: 0;
+  padding: 1rem 1rem !important; }
+  div.ui.segment.banner p.title {
     height: 100%;
     font-size: 4em;
     color: white; }
-
-.title {
-  height: 100%; }
+  div.ui.segment.banner p.about {
+    padding: 0px;
+    height: 100%;
+    font-size: 1.2em;
+    color: white;
+    opacity: 0.7; }
 
 .footer {
   width: 100%;
-  background: #19081d; }
+  background-color: #19081d;
+  position: fixed;
+  bottom: 0px; }
   .footer p {
     color: white;
     opacity: 0.7;
     font-size: 1.2em; }
-  .footer .down {
-    position: fixed;
-    bottom: 0px; }
 
-div.ui.segment.banner, div.ui.segment.content {
+div.ui.segment.content, div.ui.segment.about {
   border-radius: 0;
   margin: 0;
   padding: 0em; }
+  div.ui.segment.content p.about, div.ui.segment.about p.about {
+    padding: 0px;
+    height: 100%;
+    font-size: 1.2em;
+    color: white;
+    opacity: 0.7; }
 
-div.ui.card {
-  width: 100%; }
+div.filler {
+  width: 100%;
+  height: 1000px;
+  background-color: #19081d; }
 
 div.five.wide.column, div.ten.wide.column {
   padding: 0px; }
@@ -106,7 +120,13 @@ div.ui.grid > .row.main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-  .special .text {
+  .special .text, .special .sub {
     font-size: 6em; }
   .special .overlay {
     opacity: 0.7; }
+
+@media screen and (max-width: 750px) {
+  .filler {
+    display: none; }
+  body {
+    overflow: scroll; } }

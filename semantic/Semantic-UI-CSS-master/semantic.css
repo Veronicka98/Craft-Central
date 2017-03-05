@@ -20327,7 +20327,7 @@ ol.ui.horizontal.list li:before,
     width: 100% !important;
     margin: 0em 0em !important;
     box-shadow: none !important;
-    padding: 0.25rem 0.25rem !important;
+    padding: 0.25em 0.25em !important;
   }
 
   .ui.stackable.grid:not(.vertically) > .row {
