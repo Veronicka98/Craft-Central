@@ -87,14 +87,19 @@ div.ui.segment.banner {
     p.about {
       padding: 0px;
       height: 100%;
-      font-size: 1.2em;
+      font-size: 1.5em;
       color: white;
       opacity: 0.7;
     }
     p.title {
       height: 100%;
-      font-size: 4em;
+      font-size: 4.5em;
       color: white;
+    }
+    .logo {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
 
 }
