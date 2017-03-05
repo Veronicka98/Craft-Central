@@ -77,10 +77,11 @@ div.ui.segment.banner {
     height: 100%;
     font-size: 4.5em;
     color: white; }
-  div.ui.segment.banner .logo {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
+
+div.ui.segment.banner .logo {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
 
 .footer {
   width: 100%;
@@ -134,3 +135,5 @@ div.ui.grid > .row.main {
     display: none; }
   body {
     overflow: scroll; } }
+
+/*# sourceMappingURL=style.css.map */

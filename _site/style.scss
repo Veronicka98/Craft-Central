@@ -96,12 +96,12 @@ div.ui.segment.banner {
       font-size: 4.5em;
       color: white;
     }
-    .logo {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
+}
 
+div.ui.segment.banner .logo {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .footer {
