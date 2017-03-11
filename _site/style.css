@@ -17,7 +17,7 @@ body {
   font-family: 'Gnuolane Free';
   width: 100%;
   position: absolute;
-  overflow: hidden; }
+  overflow: scroll; }
 
 .imagecontainer:hover .overlay {
   opacity: 0.7; }
@@ -25,11 +25,14 @@ body {
 .imagecontainer {
   position: relative; }
   .imagecontainer :hover .overlay {
-    opacity: 0.7; }
+    opacity: 0.7;
+    background-color: #79AA93; }
   .imagecontainer :hover .text, .imagecontainer :hover .sub {
-    font-size: 45px; }
+    text-shadow: 1px 2px #481551;
+    font-size: 45px;
+    opacity: 0.8; }
   .imagecontainer :hover .sub {
-    font-size: 15px;
+    font-size: 23px;
     top: 62%; }
 
 .imagecontainer img {
@@ -45,7 +48,7 @@ body {
   width: 100%;
   opacity: 0.4;
   transition: .5s ease;
-  background-color: #401448; }
+  background-color: #481551; }
 
 .text, .sub {
   color: white;
@@ -56,22 +59,23 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); }
+  -ms-transform: translate(-50%, -50%);
+  opacity: 0.7; }
 
 .sub {
-  font-size: 15px;
+  font-size: 20px;
   top: 60%; }
 
 div.ui.segment.banner {
-  background-color: #401448;
+  background-color: #481551;
   border-radius: 0;
   margin: 0;
   padding: 1rem 1rem !important; }
   div.ui.segment.banner p.about {
     padding: 0px;
     height: 100%;
-    font-size: 1.5em;
-    color: white;
+    font-size: 2em;
+    color: #ECE7EC;
     opacity: 0.7; }
   div.ui.segment.banner p.title {
     height: 100%;
@@ -85,7 +89,7 @@ div.ui.segment.banner .logo {
 
 .footer {
   width: 100%;
-  background-color: #19081d;
+  background-color: #AD5451;
   position: fixed;
   bottom: 0px; }
   .footer p {
@@ -106,8 +110,8 @@ div.ui.segment.content, div.ui.segment.about {
 
 div.filler {
   width: 100%;
-  height: 1000px;
-  background-color: #19081d; }
+  padding: 0;
+  height: 30px; }
 
 div.five.wide.column, div.ten.wide.column {
   padding: 0px; }
@@ -130,10 +134,21 @@ div.ui.grid > .row.main {
   .special .overlay {
     opacity: 0.7; }
 
-@media screen and (max-width: 750px) {
-  .filler {
-    display: none; }
-  body {
-    overflow: scroll; } }
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform; }
 
-/*# sourceMappingURL=style.css.map */
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
